@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meu Patrimônio</title>
+<meta name="description" content="Controle pessoal de investimentos">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230c1b33'/%3E%3Cpath d='M14 43V30h9v13zm14 0V21h9v22zm14 0V12h9v31z' fill='%2365e6b4'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#07111f;--panel:#0d1b2f;--panel2:#11233a;--line:#223750;--text:#f4f8fb;--muted:#96a9bd;--mint:#65e6b4;--blue:#73a7ff;--gold:#f5c66a;--red:#ff8793}*{box-sizing:border-box}html{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text)}body{margin:0;min-height:100vh;background:radial-gradient(circle at 85% -5%,#173d55 0,transparent 32rem),var(--bg)}button,input,select{font:inherit}button{cursor:pointer}.shell{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.side{padding:30px 22px;border-right:1px solid var(--line);background:#07111fca;position:sticky;top:0;height:100vh}.brand{display:flex;gap:12px;align-items:center;margin-bottom:40px}.mark{width:38px;height:38px;border-radius:12px;background:var(--mint);display:grid;place-items:center;color:#082118;font-weight:900}.brand strong,.brand span{display:block}.brand span{color:var(--muted);font-size:.8rem}.nav{display:grid;gap:8px}.nav button{display:flex;align-items:center;gap:11px;width:100%;padding:12px 14px;border-radius:12px;border:0;background:transparent;color:var(--muted);text-align:left;font-weight:650}.nav button:hover,.nav button.active{background:var(--panel2);color:var(--text)}.nav svg{width:19px}.sync{position:absolute;bottom:24px;left:22px;right:22px;border:1px solid var(--line);border-radius:14px;padding:13px;color:var(--muted);font-size:.82rem}.sync b{color:var(--text);display:block;margin-bottom:5px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--mint);margin-right:7px}main{padding:38px clamp(22px,4vw,58px);max-width:1500px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;gap:20px;margin-bottom:28px}.top h1{font-size:clamp(1.55rem,3vw,2.25rem);letter-spacing:-.04em;margin:0 0 7px}.top p{margin:0;color:var(--muted)}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:1px solid var(--line);border-radius:11px;padding:10px 14px;background:var(--panel);color:var(--text);font-weight:700}.btn:hover{border-color:#3c5673}.btn.primary{background:var(--mint);border-color:var(--mint);color:#062219}.file{position:relative;overflow:hidden}.file input{position:absolute;inset:0;opacity:0;cursor:pointer}.view{display:none}.view.active{display:block}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-bottom:20px}.stat,.card{background:linear-gradient(145deg,#11233af5,#0b192bf5);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 70px #0005}.stat{padding:18px}.stat span{color:var(--muted);font-size:.85rem}.stat strong{display:block;font-size:1.55rem;margin-top:8px}.layout{display:grid;grid-template-columns:minmax(330px,.72fr) minmax(460px,1.28fr);gap:20px}.card{padding:22px}.card h2{font-size:1rem;margin:0 0 18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.82rem;color:var(--muted);font-weight:700}.field input,.field select{width:100%;background:#091628;border:1px solid var(--line);color:var(--text);border-radius:11px;padding:12px;outline:none}.field input:focus,.field select:focus{border-color:var(--mint);box-shadow:0 0 0 3px #65e6b41f}.total{display:flex;justify-content:space-between;padding:15px 0 4px;color:var(--muted)}.total strong{color:var(--text)}.form-actions{display:flex;gap:10px;margin-top:15px}.form-actions .btn{flex:1}.hint{color:var(--muted);font-size:.78rem;line-height:1.45}.table-wrap{overflow:auto}.table-tools{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:15px}.table-tools p{color:var(--muted);font-size:.84rem;margin:0}table{border-collapse:collapse;width:100%;min-width:690px}th{text-align:left;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:11px;border-bottom:1px solid var(--line)}td{padding:14px 11px;border-bottom:1px solid #223750a6;font-size:.88rem}td strong{display:block}.ticker{color:var(--muted);font-size:.76rem}.pill{display:inline-flex;padding:5px 8px;border-radius:99px;font-size:.74rem;font-weight:750;background:#73a7ff21;color:#a9c8ff}.empty{text-align:center;color:var(--muted);padding:50px 20px}.remove{border:0;background:transparent;color:var(--muted)}.remove:hover{color:var(--red)}.dash{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.bars{height:230px;display:flex;align-items:flex-end;gap:12px;padding:20px 8px 0;border-bottom:1px solid var(--line)}.bar-wrap{flex:1;text-align:center;color:var(--muted);font-size:.72rem}.bar{width:100%;background:linear-gradient(180deg,var(--mint),#228a78);border-radius:8px 8px 2px 2px;margin-bottom:8px}.donut-row{display:grid;grid-template-columns:180px 1fr;gap:26px;align-items:center}.donut{width:180px;aspect-ratio:1;border-radius:50%;background:var(--line);position:relative}.donut:after{content:"";position:absolute;inset:30px;border-radius:50%;background:var(--panel)}.legend{display:grid;gap:12px}.legend div{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:.85rem}.legend b{color:var(--text)}.toast{position:fixed;right:22px;bottom:22px;padding:13px 16px;border-radius:12px;background:var(--mint);color:#062219;font-weight:800;transform:translateY(120px);opacity:0;transition:.25s;z-index:5}.toast.show{transform:none;opacity:1}@media(max-width:980px){.shell{grid-template-columns:1fr}.side{height:auto;position:sticky;z-index:4;padding:15px 18px;display:flex;align-items:center;gap:18px;border-right:0;border-bottom:1px solid var(--line)}.brand{margin:0}.brand span,.sync{display:none}.nav{display:flex;margin-left:auto}.nav button{width:auto}.nav button span{display:none}main{padding-top:25px}.layout,.dash{grid-template-columns:1fr}}@media(max-width:620px){.top{display:grid}.actions{width:100%}.actions .btn{flex:1}.stats{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.card{padding:17px}.donut-row{grid-template-columns:1fr;justify-items:center}.legend{width:100%}}
+.filters{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin-bottom:20px;padding:16px 18px}.filters .field{min-width:190px;flex:1}.filters .btn{height:43px}.section-note{color:var(--muted);font-size:.82rem;margin:-10px 0 16px}@media(max-width:620px){.filters{align-items:stretch}.filters .field{min-width:100%}.filters .btn{width:100%}}
+.period-field{min-width:min(100%,360px)!important}.range-labels{display:flex;justify-content:space-between;color:var(--text);font-size:.82rem}.dual-range{position:relative;height:28px;margin-top:4px}.range-track,.range-fill{position:absolute;left:0;right:0;top:12px;height:5px;border-radius:99px;background:var(--line)}.range-fill{background:var(--mint)}.dual-range input{position:absolute;inset:0;width:100%;margin:0;appearance:none;background:none;pointer-events:none}.dual-range input::-webkit-slider-thumb{appearance:none;width:19px;height:19px;border-radius:50%;background:var(--mint);border:3px solid var(--panel);box-shadow:0 0 0 1px var(--mint);pointer-events:auto}.goal-card{display:grid;grid-template-columns:minmax(280px,.8fr) minmax(300px,1.2fr);gap:24px;align-items:center;margin-bottom:20px}.goal-controls{display:flex;gap:10px}.goal-controls input{min-width:0;flex:1;background:#091628;border:1px solid var(--line);color:var(--text);border-radius:11px;padding:12px;outline:none}.goal-progress-head{display:flex;justify-content:space-between;gap:12px;margin-bottom:10px}.goal-progress-head span{color:var(--muted);font-size:.85rem}.progress-track{height:12px;border-radius:99px;background:#091628;overflow:hidden}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--mint),var(--blue));border-radius:inherit;transition:width .25s}.goal-status{margin:9px 0 0;color:var(--muted);font-size:.82rem}.bars{overflow-x:auto}.bar-wrap{min-width:58px}.bar-status{display:block;margin-top:5px;font-size:.65rem;font-weight:800}.bar-status.above{color:var(--mint)}.bar-status.below{color:var(--red)}.bar-status.unset{color:var(--muted)}@media(max-width:760px){.goal-card{grid-template-columns:1fr}}
+.period-field{min-width:min(100%,440px)!important}.range-row{display:grid;grid-template-columns:52px 1fr 90px;gap:10px;align-items:center}.range-row+ .range-row{margin-top:9px}.range-row>span{color:var(--muted);font-size:.78rem}.range-row output{text-align:right;font-size:.8rem;font-weight:750}.range-row input{width:100%;accent-color:var(--mint)}.summary-kpis .stat{position:relative;overflow:hidden}.summary-kpis .stat:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--mint),var(--blue))}.chart-card{min-height:390px}.chart-header{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:8px}.chart-header h2{margin-bottom:4px}.chart-header p{margin:0;color:var(--muted);font-size:.78rem}.goal-key{display:flex;gap:13px;color:var(--muted);font-size:.75rem;white-space:nowrap}.goal-key span:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}.goal-key .hit:before{background:var(--mint)}.goal-key .miss:before{background:var(--red)}.bars{height:280px;padding-top:38px;gap:10px;background:repeating-linear-gradient(to top,transparent 0,transparent 54px,#22375055 55px)}.bar-wrap{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}.bar{position:relative;min-height:5px;background:linear-gradient(180deg,#86f0c9,#268c7b);box-shadow:0 8px 24px #65e6b426}.bar.below-goal{background:linear-gradient(180deg,#ff9da6,#9d4754);box-shadow:0 8px 24px #ff879324}.bar-value{position:absolute;top:-25px;left:50%;transform:translateX(-50%);font-size:.68rem;color:var(--text);white-space:nowrap}.bar-month{margin-top:8px;text-transform:capitalize}.donut{display:grid;place-items:center}.donut:after{display:none}.donut-center{width:120px;height:120px;border-radius:50%;background:var(--panel);display:grid;place-content:center;text-align:center;box-shadow:inset 0 0 0 1px var(--line)}.donut-center span{color:var(--muted);font-size:.7rem}.donut-center strong{font-size:.95rem;margin-top:4px}.breakdown-card{min-height:390px}.legend div{padding:8px 10px;border-radius:10px;background:#09162880}@media(max-width:620px){.range-row{grid-template-columns:45px 1fr 78px}.chart-header{display:grid}.goal-key{white-space:normal}}
+.month-inputs{display:grid;grid-template-columns:1fr 1fr;gap:10px}.month-inputs>div{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center}.month-inputs span{color:var(--muted);font-size:.78rem}.month-inputs input{width:100%;background:#091628;border:1px solid var(--line);color:var(--text);border-radius:11px;padding:10px;outline:none;color-scheme:dark}.month-inputs input:focus{border-color:var(--mint);box-shadow:0 0 0 3px #65e6b41f}@media(max-width:620px){.month-inputs{grid-template-columns:1fr}}
+.login-screen{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 70% 10%,#173d55 0,transparent 34rem),var(--bg)}.login-screen.hidden{display:none}.login-card{width:min(100%,430px);padding:34px;text-align:center}.login-card .mark{margin:0 auto 18px;width:52px;height:52px;border-radius:16px}.login-card h1{margin:0 0 10px;font-size:1.7rem}.login-card p{margin:0 0 24px;color:var(--muted);line-height:1.55}.login-card .btn{width:100%;padding:13px}.login-error{min-height:20px;margin:14px 0 0!important;color:var(--red)!important;font-size:.82rem}.user-label{display:none;color:var(--muted);font-size:.78rem;align-items:center}.signed-in .user-label{display:flex}@media(max-width:620px){.user-label{display:none!important}}
+</style>
+</head>
+<body>
+<div class="login-screen" id="login-screen">
+<div class="card login-card">
+<div class="mark">MP</div>
+<h1>Meu Patrimônio</h1>
+<p>Entre com sua conta Google para acessar seus aportes com segurança no computador e no celular.</p>
+<button class="btn primary" id="google-login">Entrar com Google</button>
+<p class="login-error" id="login-error"></p>
+</div>
+</div>
+<div class="shell">
+<aside class="side">
+<div class="brand">
+<div class="mark">MP</div>
+<div>
+<strong>Meu Patrimônio</strong>
+<span>Controle pessoal</span>
+</div>
+</div>
+<nav class="nav" aria-label="Navegação">
+<button class="active" data-view="aportes">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M12 5v14M5 12h14"/>
+</svg>
+<span>Novo aporte</span>
+</button>
+<button data-view="carteira">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<rect x="3" y="6" width="18" height="14" rx="2"/>
+<path d="M16 13h5M7 6V4h10v2"/>
+</svg>
+<span>Carteira</span>
+</button>
+<button data-view="resumo">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M4 20V10m6 10V4m6 16v-7m5 7H2"/>
+</svg>
+<span>Resumo</span>
+</button>
+</nav>
+<div class="sync">
+<b>
+<span class="dot">
+</span>Sincronizado</b>Google Sheets privado.</div>
+</aside>
+<main>
+<header class="top">
+<div>
+<h1 id="page-title">Registrar investimento</h1>
+<p id="page-subtitle">Adicione uma compra à sua carteira.</p>
+</div>
+<div class="actions">
+<span class="user-label" id="user-label"></span>
+<button class="btn" id="export">Exportar CSV</button>
+<button class="btn" id="logout">Sair</button>
+</div>
+</header>
+<section id="aportes" class="view active">
+<div class="layout">
+<form class="card" id="form">
+<h2>Dados da compra</h2>
+<div class="grid">
+<div class="field full">
+<label for="name">Ativo</label>
+<input id="name" required placeholder="Ex.: Petrobras">
+</div>
+<div class="field">
+<label for="ticker">Código / título</label>
+<input id="ticker" required placeholder="PETR4">
+</div>
+<div class="field">
+<label for="type">Categoria</label>
+<select id="type">
+<option>Ações</option>
+<option>Fundos imobiliários</option>
+<option>ETF</option>
+<option>Renda fixa</option>
+<option>Criptoativos</option>
+<option>Reserva de emergência</option>
+</select>
+</div>
+<div class="field">
+<label for="qty">Quantidade</label>
+<input id="qty" type="number" min="0" step="0.000001" required value="1">
+</div>
+<div class="field">
+<label for="price">Preço unitário</label>
+<input id="price" type="number" min="0" step="0.01" required placeholder="0,00">
+</div>
+<div class="field">
+<label for="fees">Taxas</label>
+<input id="fees" type="number" min="0" step="0.01" value="0">
+</div>
+<div class="field">
+<label for="date">Data</label>
+<input id="date" type="date" required>
+</div>
+<div class="field full">
+<label for="broker">Corretora / instituição</label>
+<input id="broker" placeholder="Ex.: NuInvest">
+</div>
+</div>
+<div class="total">
+<span>Total do aporte</span>
+<strong id="form-total">R$ 0,00</strong>
+</div>
+<div class="form-actions">
+<button type="reset" class="btn">Limpar</button>
+<button class="btn primary">Salvar aporte</button>
+</div>
+<p class="hint">Os dados ficam neste navegador. Exporte o CSV para abrir no Excel ou Google Sheets.</p>
+</form>
+<div class="card table-wrap">
+<div class="table-tools">
+<div>
+<h2 style="margin-bottom:5px">Últimos lançamentos</h2>
+<p id="count-label">0 registros</p>
+</div>
+<button class="btn" data-go="carteira">Ver carteira</button>
+</div>
+<div id="recent">
+</div>
+</div>
+</div>
+</section>
+<section id="carteira" class="view">
+<div class="card goal-card">
+<div>
+<h2>Meta mensal de aportes</h2>
+<div class="goal-controls"><input id="monthly-goal" type="number" min="0" step="50" placeholder="Ex.: 1.500,00"><button class="btn primary" id="save-goal">Salvar meta</button></div>
+</div>
+<div>
+<div class="goal-progress-head"><span>Progresso neste mês</span><strong id="goal-progress-value">R$ 0,00</strong></div>
+<div class="progress-track"><div class="progress-fill" id="goal-progress-bar"></div></div>
+<p class="goal-status" id="goal-status">Defina uma meta para acompanhar seu progresso.</p>
+</div>
+</div>
+<div class="stats">
+<div class="stat">
+<span>Total investido</span>
+<strong id="stat-total">R$ 0,00</strong>
+</div>
+<div class="stat">
+<span>Ativos diferentes</span>
+<strong id="stat-assets">0</strong>
+</div>
+<div class="stat">
+<span>Aportes registrados</span>
+<strong id="stat-count">0</strong>
+</div>
+</div>
+<div class="card table-wrap">
+<h2>Todos os investimentos</h2>
+<div id="all">
+</div>
+</div>
+</section>
+<section id="resumo" class="view">
+<div class="card filters">
+<div class="field period-field">
+<label>Intervalo mensal</label>
+<div class="month-inputs">
+<div><span>De</span><input id="period-start" type="month" aria-label="Mês inicial"></div>
+<div><span>Até</span><input id="period-end" type="month" aria-label="Mês final"></div>
+</div>
+</div>
+<div class="field">
+<label for="filter-category">Categoria</label>
+<select id="filter-category">
+<option value="">Todas as categorias</option>
+<option>Ações</option><option>Fundos imobiliários</option><option>ETF</option><option>Renda fixa</option><option>Criptoativos</option><option>Reserva de emergência</option>
+</select>
+</div>
+<button class="btn" id="clear-filters">Limpar filtros</button>
+</div>
+<div class="stats summary-kpis">
+<div class="stat">
+<span>Total no período</span>
+<strong id="dash-total">R$ 0,00</strong>
+</div>
+<div class="stat">
+<span>Destaque do recorte</span>
+<strong id="dash-main">—</strong>
+</div>
+<div class="stat">
+<span>Meses na meta</span>
+<strong id="dash-average">0 de 0</strong>
+</div>
+</div>
+<div class="dash">
+<div class="card chart-card">
+<div class="chart-header"><div><h2>Aportes por mês</h2><p>Comparação com a meta mensal definida na Carteira</p></div><div class="goal-key"><span class="hit">Meta atingida</span><span class="miss">Abaixo da meta</span></div></div>
+<div class="bars" id="month-bars">
+</div>
+</div>
+<div class="card breakdown-card">
+<h2 id="breakdown-title">Distribuição por categoria</h2>
+<div class="donut-row">
+<div class="donut" id="donut">
+<div class="donut-center"><span>Total filtrado</span><strong id="donut-total">R$ 0,00</strong></div>
+</div>
+<div class="legend" id="legend">
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<div class="toast" role="status" id="toast">Aporte salvo</div>
+<script src="config.js"></script>
+<script>
+const KEY='meu-patrimonio-v1',TOKEN_KEY='meu-patrimonio-google-token',API_URL=globalThis.APP_CONFIG?.apiUrl||'',CLIENT_ID=globalThis.APP_CONFIG?.googleClientId||'',tokenStorage=globalThis.sessionStorage||localStorage,money=new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}),sample=[{id:1,name:'Tesouro Selic 2029',ticker:'SELIC 2029',type:'Renda fixa',qty:1,price:3000,fees:0,date:'2026-07-10',broker:'Tesouro Direto'},{id:2,name:'Itaú Unibanco',ticker:'ITUB4',type:'Ações',qty:25,price:35.42,fees:0,date:'2026-08-08',broker:'Corretora'},{id:3,name:'Vanguard S&P 500',ticker:'IVVB11',type:'ETF',qty:4,price:392.8,fees:0,date:'2026-09-05',broker:'Corretora'}];let data=JSON.parse(localStorage.getItem(KEY)||'null')||sample,accessToken=tokenStorage.getItem(TOKEN_KEY)||'';const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s),val=x=>+x.qty*+x.price+ +(x.fees||0),esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));$('#date').value=new Date().toISOString().slice(0,10);function save(){localStorage.setItem(KEY,JSON.stringify(data));render()}async function api(action,payload={}){if(!API_URL||!accessToken)throw new Error('Faça login com Google para continuar.');const response=await fetch(API_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action,accessToken,...payload})});const result=await response.json();if(!result.ok)throw new Error(result.error||'Falha na sincronização.');return result}function toast(s){let t=$('#toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}function table(rows,remove=false){if(!rows.length)return'<div class="empty">Nenhum investimento registrado ainda.</div>';return`<table><thead><tr><th>Ativo</th><th>Categoria</th><th>Data</th><th>Quantidade</th><th>Total</th>${remove?'<th></th>':''}</tr></thead><tbody>${rows.map(x=>`<tr><td><strong>${esc(x.name)}</strong><span class="ticker">${esc(x.ticker)}</span></td><td><span class="pill">${esc(x.type)}</span></td><td>${new Date(x.date+'T12:00:00').toLocaleDateString('pt-BR')}</td><td>${x.qty}</td><td><strong>${money.format(val(x))}</strong></td>${remove?`<td><button class="remove" aria-label="Excluir" data-remove="${x.id}">✕</button></td>`:''}</tr>`).join('')}</tbody></table>`}
+const GOAL_KEY='meu-patrimonio-meta-mensal',monthlyGoalInitial=Number(localStorage.getItem(GOAL_KEY)||0);let monthlyGoal=monthlyGoalInitial;
+function monthSequence(first,last){
+  const result=[],cursor=new Date(first+'-02T12:00:00'),limit=new Date(last+'-02T12:00:00');
+  while(cursor<=limit){result.push(`${cursor.getFullYear()}-${String(cursor.getMonth()+1).padStart(2,'0')}`);cursor.setMonth(cursor.getMonth()+1)}return result;
+}
+function render(){
+  const total=data.reduce((sum,x)=>sum+val(x),0),dataMonths=data.map(x=>x.date.slice(0,7)).sort(),fallback=new Date().toISOString().slice(0,7),start=$('#period-start'),end=$('#period-end');
+  if(!start.value)start.value=dataMonths[0]||fallback;if(!end.value)end.value=dataMonths.at(-1)||fallback;if(start.value>end.value)end.value=start.value;
+  const startMonth=start.value,endMonth=end.value,availableMonths=monthSequence(startMonth,endMonth);
+  const selectedCategory=$('#filter-category').value;
+  const filtered=data.filter(x=>x.date.slice(0,7)>=startMonth&&x.date.slice(0,7)<=endMonth&&(!selectedCategory||x.type===selectedCategory));
+  const filteredTotal=filtered.reduce((sum,x)=>sum+val(x),0),groups={};
+  filtered.forEach(x=>{const key=selectedCategory?(x.ticker||x.name):x.type;groups[key]=(groups[key]||0)+val(x)});
+  $('#recent').innerHTML=table([...data].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5));
+  $('#all').innerHTML=table([...data].sort((a,b)=>b.date.localeCompare(a.date)),true);
+  $('#count-label').textContent=`${data.length} registros`;
+  $('#stat-total').textContent=money.format(total);$('#stat-assets').textContent=new Set(data.map(x=>x.ticker.toUpperCase())).size;$('#stat-count').textContent=data.length;
+  $('#dash-total').textContent=money.format(filteredTotal);$('#donut-total').textContent=money.format(filteredTotal);
+  const sorted=Object.entries(groups).sort((a,b)=>b[1]-a[1]);$('#dash-main').textContent=sorted[0]?.[0]||'—';
+  $('#breakdown-title').textContent=selectedCategory?`Ativos em ${selectedCategory}`:'Distribuição por categoria';
+  const colors=['var(--mint)','var(--blue)','var(--gold)','var(--red)','#b499ff'],stops=[];let acc=0;
+  sorted.forEach(([key,value],i)=>{const from=acc;acc+=filteredTotal?value/filteredTotal*100:0;stops.push(`${colors[i%colors.length]} ${from}% ${acc}%`)});
+  $('#donut').style.background=stops.length?`conic-gradient(${stops.join(',')})`:'var(--line)';
+  $('#legend').innerHTML=sorted.length?sorted.map(([key,value],i)=>`<div><span><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${colors[i%colors.length]};margin-right:8px"></i>${esc(key)}</span><b>${Math.round(value/filteredTotal*100)}%</b></div>`).join(''):'<div>Sem dados para estes filtros</div>';
+  const months={},goalMonths={};filtered.forEach(x=>{const key=x.date.slice(0,7);months[key]=(months[key]||0)+val(x)});data.forEach(x=>{const key=x.date.slice(0,7);goalMonths[key]=(goalMonths[key]||0)+val(x)});
+  const selectedMonths=availableMonths,entries=selectedMonths.map(key=>[key,months[key]||0]),max=Math.max(...entries.map(x=>x[1]),monthlyGoal,1),monthsOnGoal=monthlyGoal?selectedMonths.filter(key=>(goalMonths[key]||0)>=monthlyGoal).length:0;
+  $('#dash-average').textContent=monthlyGoal?`${monthsOnGoal} de ${selectedMonths.length}`:'Sem meta';
+  $('#month-bars').innerHTML=entries.map(([key,value])=>{const overall=goalMonths[key]||0,status=!monthlyGoal?'Sem meta':overall>=monthlyGoal?'Acima':'Abaixo',statusClass=!monthlyGoal?'unset':overall>=monthlyGoal?'above':'below',barClass=monthlyGoal&&overall<monthlyGoal?'below-goal':'';return`<div class="bar-wrap"><div class="bar ${barClass}" title="${money.format(value)}" style="height:${Math.max(5,value/max*210)}px"><span class="bar-value">${money.format(value)}</span></div><span class="bar-month">${new Date(key+'-02T12:00:00').toLocaleDateString('pt-BR',{month:'short'})}</span><span class="bar-status ${statusClass}">${status}</span></div>`}).join('');
+  const currentMonth=new Date().toISOString().slice(0,7),currentTotal=goalMonths[currentMonth]||0,progress=monthlyGoal?Math.min(currentTotal/monthlyGoal*100,100):0;
+  $('#monthly-goal').value=monthlyGoal||'';$('#goal-progress-value').textContent=monthlyGoal?`${money.format(currentTotal)} de ${money.format(monthlyGoal)}`:money.format(currentTotal);$('#goal-progress-bar').style.width=`${progress}%`;$('#goal-status').textContent=!monthlyGoal?'Defina uma meta para acompanhar seu progresso.':currentTotal>=monthlyGoal?`Meta superada em ${money.format(currentTotal-monthlyGoal)}.`:`Faltam ${money.format(monthlyGoal-currentTotal)} para a meta deste mês.`;
+  $$('[data-remove]').forEach(b=>b.onclick=async()=>{const id=b.dataset.remove,previous=[...data];data=data.filter(x=>String(x.id)!==id);save();try{if(API_URL&&accessToken)await api('delete',{id});toast('Lançamento excluído')}catch(error){data=previous;save();toast(error.message)}});
+}
+function updateTotal(){$('#form-total').textContent=money.format(+$('#qty').value*+$('#price').value+ +$('#fees').value)}['#qty','#price','#fees'].forEach(s=>$(s).oninput=updateTotal);$('#form').onsubmit=async e=>{e.preventDefault();const item={id:String(Date.now()),name:$('#name').value.trim(),ticker:$('#ticker').value.trim().toUpperCase(),type:$('#type').value,qty:+$('#qty').value,price:+$('#price').value,fees:+$('#fees').value,date:$('#date').value,broker:$('#broker').value.trim()};data.push(item);save();e.target.reset();$('#qty').value=1;$('#fees').value=0;$('#date').value=new Date().toISOString().slice(0,10);updateTotal();try{if(API_URL&&accessToken){const result=await api('add',{investment:item});item.id=result.id;save()}toast('Aporte salvo')}catch(error){data=data.filter(x=>x!==item);save();toast(error.message)}};const meta={aportes:['Registrar investimento','Adicione uma compra à sua carteira.'],carteira:['Sua carteira','Consulte todos os lançamentos.'],resumo:['Resumo da carteira','Acompanhe a composição dos seus aportes.']};function go(id){$$('.view').forEach(v=>v.classList.toggle('active',v.id===id));$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===id));$('#page-title').textContent=meta[id][0];$('#page-subtitle').textContent=meta[id][1]}$$('.nav button').forEach(b=>b.onclick=()=>go(b.dataset.view));$$('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));
+$('#export').onclick=()=>{let heads=['nome','ticker','categoria','quantidade','preco_unitario','taxas','data','instituicao'],lines=[heads.join(';'),...data.map(x=>[x.name,x.ticker,x.type,x.qty,x.price,x.fees,x.date,x.broker].map(v=>`"${String(v??'').replaceAll('"','""')}"`).join(';'))],blob=new Blob(['\ufeff'+lines.join('\n')],{type:'text/csv'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='meu-patrimonio.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),100);toast('Planilha exportada')};
+$('#period-start').onchange=()=>{if($('#period-start').value>$('#period-end').value)$('#period-end').value=$('#period-start').value;render()};
+$('#period-end').onchange=()=>{if($('#period-end').value<$('#period-start').value)$('#period-start').value=$('#period-end').value;render()};
+$('#filter-category').onchange=render;$('#clear-filters').onclick=()=>{$('#period-start').value='';$('#period-end').value='';$('#filter-category').value='';render()};
+$('#save-goal').onclick=async()=>{const previous=monthlyGoal;monthlyGoal=Math.max(0,Number($('#monthly-goal').value||0));localStorage.setItem(GOAL_KEY,String(monthlyGoal));render();try{if(API_URL&&accessToken)await api('setGoal',{goal:monthlyGoal});toast('Meta mensal salva')}catch(error){monthlyGoal=previous;localStorage.setItem(GOAL_KEY,String(previous));render();toast(error.message)}};function showLogin(message=''){$('#login-screen').classList.remove('hidden');$('#login-error').textContent=message}function hideLogin(user){$('#login-screen').classList.add('hidden');$('#user-label').textContent=user?.email||''}async function loadRemote(){if(!API_URL||!CLIENT_ID){showLogin('A conexão com o Google ainda está sendo configurada.');return}if(!accessToken){showLogin();return}try{const result=await api('list');data=result.investments||[];monthlyGoal=Number(result.monthlyGoal||0);localStorage.setItem(KEY,JSON.stringify(data));localStorage.setItem(GOAL_KEY,String(monthlyGoal));hideLogin(result.user);render();toast('Dados sincronizados')}catch(error){accessToken='';tokenStorage.removeItem(TOKEN_KEY);showLogin(error.message)}}$('#google-login').onclick=()=>{if(!CLIENT_ID){showLogin('Login ainda não configurado.');return}if(!globalThis.google?.accounts?.oauth2){showLogin('O Google ainda está carregando. Tente novamente.');return}const client=google.accounts.oauth2.initTokenClient({client_id:CLIENT_ID,scope:'openid email profile',callback:response=>{if(response.error){showLogin('Não foi possível entrar com Google.');return}accessToken=response.access_token;tokenStorage.setItem(TOKEN_KEY,accessToken);loadRemote()}});client.requestAccessToken({prompt:'select_account'})};$('#logout').onclick=()=>{if(accessToken&&globalThis.google?.accounts?.oauth2)google.accounts.oauth2.revoke(accessToken,()=>{});accessToken='';tokenStorage.removeItem(TOKEN_KEY);showLogin()};render();updateTotal();loadRemote();
+</script></body></html>
